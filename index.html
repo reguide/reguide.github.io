@@ -4,9 +4,79 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Portfolio</title>
+	<title>ReGuide</title>
+	<link rel="icon" type="image/jpg" href="static/images/icon.jpg" />
 </head>
 <body>
-  <p>Hello, World!</p>
+  <section class="hero">
+			<div class="hero-body">
+				<div class="container is-max-desktop">
+					<div class="columns is-centered">
+						<div class="column has-text-centered">
+							<h1 class="title is-1 publication-title">Reflexive Guidance: Improving OoDD in Vision-Language Models via Self-Guided Image-Adaptive Concept Generation</h1>
+							<div class="is-size-5 publication-authors">
+								<span class="author-block">
+									<a href="">Jihyo Kim</a><sup>*</sup>,</span>
+									<a href="">Seulbi Lee</a><sup>*</sup>,</span>
+									<a href="">Sangheum Hwang</a></sup>,</span>
+								</span>
+								<span class="author-block">
+									<a style="font-size: 8px;">(<sup>*</sup> Equal contribution)</a>
+							</div>
+
+							<div class="is-size-5 publication-authors">
+								<span class="author-block"></sup>Seoul National University of Science and Technology</span>
+							</div>
+
+							<div class="column has-text-centered">
+								<div class="publication-links">
+									<span class="link-block">
+										<a href="https://openreview.net/forum?id=R4h5PXzUuU" target="_blank" class="external-link button is-normal is-rounded is-dark">
+											<span class="icon"><i class="fas fa-file-pdf"></i></span>
+											<span>Paper</span>
+										</a>
+									</span>
+									<span class="link-block">
+										<a
+											href="https://github.com/daintlab/ReGuide"
+											target="_blank"
+											class="external-link button is-normal is-rounded is-dark">
+											<span class="icon"><i class="fab fa-github"></i></span>
+											<span>Github</span>
+										</a>
+									</span>
+									<span class="link-block">
+										<a
+											href="https://huggingface.co/datasets/daintlab/reguide"
+											target="_blank"
+											class="external-link button is-normal is-rounded is-dark">
+											<span class="icon"><i class="fab fa-huggingface"></i></span>
+											<span>Huggingface</span>
+										</a>
+									</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Paper abstract -->
+		<section class="section abstract">
+			<div class="container is-max-desktop">
+				<div class="columns is-centered has-text-centered">
+					<div class="column is-four-fifths">
+						<h2 class="title is-3">Abstract</h2>
+						<div class="content has-text-justified">
+							<p>
+								With the recent emergence of foundation models trained on internet-scale data and demonstrating remarkable generalization capabilities, such foundation models have become more widely adopted, leading to an expanding range of application domains. Despite this rapid proliferation, the trustworthiness of foundation models remains underexplored. Specifically, the out-of-distribution detection (OoDD) capabilities of large vision-language models (LVLMs), such as GPT-4o, which are trained on massive multi-modal data, have not been sufficiently addressed. The disparity between their demonstrated potential and practical reliability raises concerns regarding the safe and trustworthy deployment of foundation models. To address this gap, we evaluate and analyze the OoDD capabilities of various proprietary and open-source LVLMs. Our investigation contributes to a better understanding of how these foundation models represent confidence scores through their generated natural language responses. Furthermore, we propose a self-guided prompting approach, termed Reflexive Guidance (ReGuide), aimed at enhancing the OoDD capability of LVLMs by leveraging self-generated image-adaptive concept suggestions. Experimental results demonstrate that our ReGuide enhances the performance of current LVLMs in both image classification and OoDD tasks. The lists of sampled images, along with the prompts and responses for each sample are available at https://github.com/daintlab/ReGuide.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- End paper abstract -->
 </body>
 </html>
