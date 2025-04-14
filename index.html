@@ -287,7 +287,7 @@
           <img src="static/images/reguide.png" alt="ReGuide Diagram">
         </figure>
       </div>
-      <div>
+      <div class="content">
         <p>
           Reflexive Guidance (ReGuide) is a simple and model-agnostic two-stage prompting strategy to enhance the OoD detectability of LVLMs. We leverage the LVLM itself to obtain guidance for OoDD from its powerful zero-shot visual recognition capabilities.
         </p>
@@ -300,6 +300,7 @@
           <li>The second <i>N</i> classes are visually dissimilar or from different domains (far-OoD).</li>
           <li>For OoD images, suggested classes often closely match the ground-truth label.</li>
         </ul>
+        <br>
         <p>
           <strong>Stage 2:</strong> The suggested classes are used as auxiliary OoD classes.
         </p>
@@ -310,12 +311,11 @@
       </div>
       <!-- result -->
       <div style="width:100%; margin: 0 auto 1rem auto; text-align: center;">
-        <br>
         <figure style="display: inline-block;">
           <img src="static/images/result-reguide.png" alt="OoDD in LVLMs" style="max-width: 100%; height: auto;">
         </figure>
       </div>
-      <div>
+      <div class="content">
         <h3>General Performance</h3>
           <ul>
             <li>ReGuide improves both <strong>ID classification</strong> and <strong>OoDD performance</strong>, especially when using visually similar classes (A<sub>near</sub>).</li>
