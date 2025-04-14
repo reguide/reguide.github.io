@@ -113,16 +113,16 @@
 		      <div class="column has-text-centered">
 		        <figure class="image">
 		          <img src="static/images/fig1-radar-all.png" alt="Radar All" style="width: 80%; height: auto;">
-		          <figcaption class="mt-2">
-		            <p><small><strong>Figure 1a.</strong> Radar chart comparing all methods.</small></p>
+		          <figcaption>
+		            <p><small>(a) Radar chart comparing all methods.</small></p>
 		          </figcaption>
 		        </figure>
 		      </div>
 		      <div class="column has-text-centered">
 		        <figure class="image">
-		          <img src="static/images/fig1-radar-reguide.png" alt="Radar ReGuide" style="width: 80%; height: auto;">
-		          <figcaption class="mt-2">
-		            <p><small><strong>Figure 1b.</strong> Radar chart focused on ReGuide performance.</small></p>
+		          <img src="static/images/fig1-radar-reguide.png" alt="Radar ReGuide" style="width: 100%; height: auto;">
+		          <figcaption>
+		            <p><small>(b) Radar chart focused on ReGuide performance.</small></p>
 		          </figcaption>
 		        </figure>
 		      </div>
@@ -135,12 +135,12 @@
 	<section class="section">
 	  <div class="container is-max-desktop">
 	    <h2 class="title is-3">OoDD in LVLMs</h2>
-	    <div class="has-text-centered" style="margin-bottom: 1rem;">
+	    <div class="has-text-centered" style="width:70%; height: auto; margin-bottom: 1rem;">
 	      <figure class="image is-inline-block">
 	        <img src="static/images/oodd-in-lvlm.png" alt="OoDD in LVLMs">
 	      </figure>
 	    </div>
-	    <div class="content has-text-centered">
+	    <div>
 	      <p> Given the vast amount and broad domain coverage of data used to train LVLMs, the conventional definition faces challenges in its direct application to LVLMs. To address this, we extend the zero-shot OoDD framework of CLIP to generative LVLMs: the scenario where an in-distribution (ID) class words set does not contain the ground-truth label of an input image. We use the maximum confidence score among ID classes as OoD score.</p>
 	    </div>
 	  </div>
@@ -154,7 +154,7 @@
 	      <img src="static/images/reguide.png" alt="ReGuide Diagram">
 	    </figure>
 		</div>
-	    <div class="content has-text-centered">
+	    <div>
 	      <p> Reflexive Guidance (ReGuide) is a simple and model-agnostic two-stage prompting strategy to enhance the OoD detectability of LVLMs. We leverage the LVLM itself to obtain guidance for OoDD from its powerful zero-shot visual recognition capabilities.</p>
 	      <p> <b>Stage 1</b> The LVLM is asked to suggest 2N class names derived from the given image. The first N classes are visually similar to the image conceptually corresponding to the near-OoD. The second N classes are visually dissimilar or belong to different domains conceptually corresponding to far-OoD. For OoD images, suggested classes often align closely with the ground-truth label. </p>
 	      <p> <b>Stage 2</b> The suggested classes are employed as auxiliary OoD classes. OoD inputs may receive higher confidence score for suggested than for ID classes. The rejection class is retained as a fallback.
