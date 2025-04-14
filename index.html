@@ -174,37 +174,28 @@
         </figure>
           <p>
             To extend conventional OoD detection (OoDD) to Large Vision-Language Models (LVLMs), this study adapts the zero-shot CLIP-based framework by:
+              <ol>
+                <li>Using a fixed set of in-distribution (ID) class names (<code>𝒴</code>) and a special rejection class ("none of these classes").</li>
+                <li>Extracting confidence scores from natural language outputs of LVLMs.</li>
+                <li>Defining the OoD score as the maximum confidence among ID classes applying softmax function for normalization.</li>
+              </ol>
           </p>
-            <ol>
-              1. Using a fixed set of in-distribution (ID) class names (<code>𝒴</code>) and a special rejection class ("none of these classes").
-              2. Extracting confidence scores from natural language outputs of LVLMs.
-              3. Defining the OoD score as the maximum confidence among ID classes applying softmax function for normalization.
-            </ol>
           <p>
             The prompt design used in LVLM-based OoDD evaluation consists of four main components:
               <ol>
                 <li>
-                  <strong>Task Description:</strong>
-                  Clearly states the goal, such as “Classify the given image into one of the classes in <code>𝒴</code>.”
+                  <strong>Task Description</strong> clearly states the objectives.
                 </li>
                 <li>
-                  <strong>Rejection Class:</strong>
-                  Adds a special label <code>"none of these classes"</code> to allow the model to reject OoD inputs explicitly.
+                  <strong>Rejection Class</strong> adds a special label <code>"none of these classes"</code> to allow the model to reject OoD inputs explicitly.
                 </li>
                 <li>
-                  <strong>Guidelines Addressing Failure Cases:</strong>
-                  Ensures robust predictions by:
-                  <ul>
-                    <li>Avoiding uniform or 0.0 confidence across all classes</li>
-                    <li>Requiring a valid score for each class in <code>𝒴</code></li>
-                    <li>Ensuring clear, single prediction outputs</li>
-                  </ul>
+                  <strong>Guidelines</strong> address the most common failure cases.
                 </li>
                 <li>
-                  <strong>Response Examples:</strong>
-                  Uses in-context learning (ICL) to present examples of valid responses. This helps LVLMs refer to the correct format and behavior for both ID and OoD inputs.
+                  <strong>Response Examples</strong> uses in-context learning (ICL) to present examples of valid responses.
                 </li>
-              </ol>
+          </ol>
         </p>
       </div>
       <div>
@@ -217,16 +208,17 @@
           <img src="static/images/result-oodd-in-lvlms.png" alt="OoDD in LVLMs" style="max-width: 100%; height: auto;">
         </figure>
       </div>
+      <div>
+      <h3>Key Results and Observations</h3>
+      <ul>
+        <li>Proprietary LVLMs generally outperform open-source and single-modal models in both ID and OoD tasks.</li>
+        <li>LVLMs perform better on <strong>far-OoD</strong> than <strong>near-OoD</strong>.</li>
+        <li>InternVL2-76B achieves the best balance across ID accuracy, OoD performance, and valid response rate.</li>
+        <li>OpenCLIP struggles with valid outputs but aligns with prior leaderboard rankings.</li>
+        <li>Some open-source models show 100% FPR due to biased confidence distribution, e.g., GLM-4v performs best in OoD but poorly in ID classification.</li>
+        <li>Prompt quality and rejection class play a crucial role in guiding proper LVLM behavior.</li>
+      </ul>
         
-  <h3>Key Results and Observations</h3>
-  <ul>
-    <li>Proprietary LVLMs generally outperform open-source and single-modal models in both ID and OoD tasks.</li>
-    <li>LVLMs perform better on <strong>far-OoD</strong> than <strong>near-OoD</strong>.</li>
-    <li>InternVL2-76B achieves the best balance across ID accuracy, OoD performance, and valid response rate.</li>
-    <li>OpenCLIP struggles with valid outputs but aligns with prior leaderboard rankings.</li>
-    <li>Some open-source models show 100% FPR due to biased confidence distribution, e.g., GLM-4v performs best in OoD but poorly in ID classification.</li>
-    <li>Prompt quality and rejection class play a crucial role in guiding proper LVLM behavior.</li>
-  </ul>
       </div>
     </div>
   </section>
