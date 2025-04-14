@@ -34,6 +34,7 @@
    <style>
     .swiper-slide {
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
       height: auto;
@@ -215,9 +216,7 @@
           <li>Proprietary LVLMs generally outperform open-source and single-modal models in both ID and OoD tasks.</li>
           <li>LVLMs perform better on <strong>far-OoD</strong> than <strong>near-OoD</strong>.</li>
           <li>InternVL2-76B achieves the best balance across ID accuracy, OoD performance, and valid response rate.</li>
-          <li>OpenCLIP struggles with valid outputs but aligns with prior leaderboard rankings.</li>
           <li>Some open-source models show 100% FPR due to biased confidence distribution, e.g., GLM-4v performs best in OoD but poorly in ID classification.</li>
-          <li>Prompt quality and rejection class play a crucial role in guiding proper LVLM behavior.</li>
         </ul> 
       </div>
     </div>
@@ -232,7 +231,7 @@
             <div style="width:100%; margin: 0 auto 1rem auto; text-align: center;">
               <img src="static/images/result-further.png" alt="Run 1">
             </div>
-            <div>
+            <div class="content" style="text-align: left; margin-top: 1rem;">
               <ul>
                 <li><strong>(a) FPR across different TPR thresholds</strong>: LLaVA-v1.6 consistently yields 100% FPR overall TPR, indicating extreme overconfidence across thresholds.</li>
                 <li><strong>(b) OoD score distribution</strong>: InternVL2-76B shows a balanced distribution of OoD scores, while GPT-4o has more extreme values (0 or 100), suggesting overconfidence.</li>
@@ -245,7 +244,7 @@
             <div style="width:100%; margin: 0 auto 1rem auto; text-align: center;">
               <img src="static/images/result-reasoning.png" alt="Run 2">
             </div>
-            <div>
+            <div class="content" style="text-align: left; margin-top: 1rem;">
               <ul>
                 <li>High interpretability of visual inputs improves OoD prediction.</li>
                 <li>InternVL2-26B handles fine-grained object differentiation well, but GPT-4o shows more detailed rationales.</li>
@@ -256,7 +255,7 @@
             <div>
               <img src="static/images/result-confidence-id.png" style="max-width:50%", alt="Run 3">
             </div>
-            <div>
+            <div class="content" style="text-align: left; margin-top: 1rem;">
               <ul>
                 <li>
                   <strong>ID Confidence:</strong> GPT-4o and OpenCLIP show reliable calibration. InternVL2-76B is accurate but tends to assign overly high confidence.
@@ -380,20 +379,6 @@
 
   <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-  <script>
-  const swiper = new Swiper('.mySwiper', {
-    loop: true,
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-    },
-  });
-  </script>
-
   <script>
   const swiper = new Swiper('.mySwiper', {
     loop: true,
