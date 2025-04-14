@@ -172,6 +172,8 @@
         <figure style="display: inline-block;">
           <img src="static/images/oodd-in-lvlm.png" alt="OoDD in LVLMs" style="max-width: 100%; height: auto;">
         </figure>
+      </div>
+      <div>
           <p>
             To extend conventional OoD detection (OoDD) to Large Vision-Language Models (LVLMs), this study adapts the zero-shot CLIP-based framework by:
               <ol>
@@ -198,9 +200,6 @@
           </ol>
         </p>
       </div>
-      <div>
-        <p> </p>
-      </div>
       <!-- result -->
       <div style="width:100%; margin: 0 auto 1rem auto; text-align: center;">
         <br>
@@ -209,16 +208,15 @@
         </figure>
       </div>
       <div>
-      <h3>Key Results and Observations</h3>
-      <ul>
-        <li>Proprietary LVLMs generally outperform open-source and single-modal models in both ID and OoD tasks.</li>
-        <li>LVLMs perform better on <strong>far-OoD</strong> than <strong>near-OoD</strong>.</li>
-        <li>InternVL2-76B achieves the best balance across ID accuracy, OoD performance, and valid response rate.</li>
-        <li>OpenCLIP struggles with valid outputs but aligns with prior leaderboard rankings.</li>
-        <li>Some open-source models show 100% FPR due to biased confidence distribution, e.g., GLM-4v performs best in OoD but poorly in ID classification.</li>
-        <li>Prompt quality and rejection class play a crucial role in guiding proper LVLM behavior.</li>
-      </ul>
-        
+        <h3>Key Results and Observations</h3>
+        <ul>
+          <li>Proprietary LVLMs generally outperform open-source and single-modal models in both ID and OoD tasks.</li>
+          <li>LVLMs perform better on <strong>far-OoD</strong> than <strong>near-OoD</strong>.</li>
+          <li>InternVL2-76B achieves the best balance across ID accuracy, OoD performance, and valid response rate.</li>
+          <li>OpenCLIP struggles with valid outputs but aligns with prior leaderboard rankings.</li>
+          <li>Some open-source models show 100% FPR due to biased confidence distribution, e.g., GLM-4v performs best in OoD but poorly in ID classification.</li>
+          <li>Prompt quality and rejection class play a crucial role in guiding proper LVLM behavior.</li>
+        </ul> 
       </div>
     </div>
   </section>
