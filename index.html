@@ -179,7 +179,7 @@
             To extend conventional OoD detection (OoDD) to Large Vision-Language Models (LVLMs), this study adapts the zero-shot CLIP-based framework by:
           </p>
               <ul>
-                <li>Using a fixed set of in-distribution (ID) class names (<code>𝒴</code>) and a special rejection class ("none of these classes").</li>
+                <li>Using a fixed set of in-distribution (ID) class names and a special rejection class ("none of these classes").</li>
                 <li>Extracting confidence scores from natural language outputs of LVLMs.</li>
                 <li>Defining the OoD score as the maximum confidence among ID classes applying softmax function for normalization.</li>
               </ul>
@@ -193,7 +193,7 @@
               <strong>Task Description</strong> clearly states the objectives.
             </li>
             <li>
-              <strong>Rejection Class</strong> adds a special label <code>"none of these classes"</code> to allow the model to reject OoD inputs explicitly.
+              <strong>Rejection Class</strong> adds a special label "none of these classes" to allow the model to reject OoD inputs explicitly.
             </li>
             <li>
               <strong>Guidelines</strong> address the most common failure cases.
@@ -252,7 +252,7 @@
             </div> 
           </div>
           <div class="swiper-slide">
-            <div style="width:80%; margin: 0 auto 1rem auto; text-align: center;">
+            <div style="width:100%; margin: 0 auto 1rem auto; text-align: center;">
               <img src="static/images/result-confidence-id.png" style="max-width:70%", alt="Run 3">
             </div>
             <div class="content" style="text-align: left; margin-top: 1rem;">
