@@ -108,18 +108,16 @@
           <h2 class="title is-3">Abstract</h2>
           <div class="content has-text-justified">
             <p><strong>ReGuide</strong> is a self-guided prompting approach designed to improve 
-              <strong>out-of-distribution detection (OoDD)</strong> in 
-              <strong>Large Vision-Language Models (LVLMs)</strong> such as GPT-4o.
+              <strong>out-of-distribution detection (OoDD) in Large Vision-Language Models (LVLMs)</strong>.
             </p>
-          
-            <h3>🔍 Motivation</h3>
+            <h3>Motivation</h3>
             <ul>
               <li><strong>Foundation models</strong> (e.g., GPT-4o) are widely used due to their strong generalization abilities.</li>
               <li>However, their <strong>trustworthiness</strong>, particularly in <strong>OoDD scenarios</strong>, is still underexplored.</li>
               <li>This raises concerns about their <strong>safe and reliable deployment</strong> in real-world applications.</li>
             </ul>
           
-            <h3>🚀 What We Do</h3>
+            <h3>What We Do</h3>
             <ul>
               <li>Evaluate the <strong>OoDD capabilities</strong> of both proprietary and open-source LVLMs.</li>
               <li>Analyze how these models express <strong>confidence</strong> through their <strong>generated natural language responses</strong>.</li>
@@ -131,18 +129,12 @@
               </li>
             </ul>
           
-            <h3>🧪 Results</h3>
+            <h3>Results</h3>
             <ul>
               <li><strong>Improves image classification performance</strong></li>
               <li><strong>Enhances OoDD detection accuracy</strong></li>
               <li>Works as a simple yet effective enhancement for current LVLMs</li>
             </ul>
-          
-            <h3>📂 Resources</h3>
-            <p>
-              ✅ <strong>Prompts, responses, and sample images available at:</strong><br />
-              👉 <a href="https://github.com/daintlab/ReGuide" target="_blank">https://github.com/daintlab/ReGuide</a>
-            </p>
             </div>
           </div>
         </div>
@@ -180,9 +172,43 @@
         <figure style="display: inline-block;">
           <img src="static/images/oodd-in-lvlm.png" alt="OoDD in LVLMs" style="max-width: 100%; height: auto;">
         </figure>
+          <p>
+            To extend conventional OoD detection (OoDD) to Large Vision-Language Models (LVLMs), this study adapts the zero-shot CLIP-based framework by:
+          </p>
+            <ol>
+              1. Using a fixed set of in-distribution (ID) class names (<code>𝒴</code>) and a special rejection class ("none of these classes").
+              2. Extracting confidence scores from natural language outputs of LVLMs.
+              3. Defining the OoD score as the maximum confidence among ID classes applying softmax function for normalization.
+            </ol>
+          <p>
+            The prompt design used in LVLM-based OoDD evaluation consists of four main components:
+              <ol>
+                <li>
+                  <strong>Task Description:</strong>
+                  Clearly states the goal, such as “Classify the given image into one of the classes in <code>𝒴</code>.”
+                </li>
+                <li>
+                  <strong>Rejection Class:</strong>
+                  Adds a special label <code>"none of these classes"</code> to allow the model to reject OoD inputs explicitly.
+                </li>
+                <li>
+                  <strong>Guidelines Addressing Failure Cases:</strong>
+                  Ensures robust predictions by:
+                  <ul>
+                    <li>Avoiding uniform or 0.0 confidence across all classes</li>
+                    <li>Requiring a valid score for each class in <code>𝒴</code></li>
+                    <li>Ensuring clear, single prediction outputs</li>
+                  </ul>
+                </li>
+                <li>
+                  <strong>Response Examples:</strong>
+                  Uses in-context learning (ICL) to present examples of valid responses. This helps LVLMs refer to the correct format and behavior for both ID and OoD inputs.
+                </li>
+              </ol>
+        </p>
       </div>
       <div>
-        <p> Given the vast amount and broad domain coverage of data used to train LVLMs, the conventional definition faces challenges in its direct application to LVLMs. To address this, we extend the zero-shot OoDD framework of CLIP to generative LVLMs: the scenario where an in-distribution (ID) class words set does not contain the ground-truth label of an input image. We use the maximum confidence score among ID classes as OoD score.</p>
+        <p> </p>
       </div>
       <!-- result -->
       <div style="width:100%; margin: 0 auto 1rem auto; text-align: center;">
@@ -191,8 +217,16 @@
           <img src="static/images/result-oodd-in-lvlms.png" alt="OoDD in LVLMs" style="max-width: 100%; height: auto;">
         </figure>
       </div>
-      <div>
-        <p> As shown in the above table, proprietary models outperform the open-source models in most cases. Some open-source models perform poorly on OoDD descpite decent VLM benchmark results. Moreover, all compared models have more difficulty in detecting near-OoD than far-OoD. Finally, the proprietary models generally perform outperform outperform the single modal SOTA OoDD models. </p>
+        
+  <h3>Key Results and Observations</h3>
+  <ul>
+    <li>Proprietary LVLMs generally outperform open-source and single-modal models in both ID and OoD tasks.</li>
+    <li>LVLMs perform better on <strong>far-OoD</strong> than <strong>near-OoD</strong>.</li>
+    <li>InternVL2-76B achieves the best balance across ID accuracy, OoD performance, and valid response rate.</li>
+    <li>OpenCLIP struggles with valid outputs but aligns with prior leaderboard rankings.</li>
+    <li>Some open-source models show 100% FPR due to biased confidence distribution, e.g., GLM-4v performs best in OoD but poorly in ID classification.</li>
+    <li>Prompt quality and rejection class play a crucial role in guiding proper LVLM behavior.</li>
+  </ul>
       </div>
     </div>
   </section>
