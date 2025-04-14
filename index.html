@@ -16,6 +16,7 @@
 		<meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<title>ReGuide</title>
+	
 		<link rel="icon" type="image/jpg" href="static/images/icon.svg" />
 		<link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet" />
 		<link rel="stylesheet" href="static/css/bulma.min.css" />
@@ -39,6 +40,7 @@
 				<div class="columns is-centered">
 					<div class="column has-text-centered">
 						<h1 class="title is-1 publication-title">Reflexive Guidance: Improving OoDD in Vision-Language Models via Self-Guided Image-Adaptive Concept Generation</h1>
+						<h2 class="title is-2">ICLR 2025</h2>
 						<div class="is-size-5 publication-authors">
 							<span class="author-block">
 								<a href="https://www.linkedin.com/in/jihyo-kim-0b5289194/">Jihyo Kim</a><sup>*</sup>,</span>
@@ -120,7 +122,7 @@
 		      </div>
 		      <div class="column has-text-centered">
 		        <figure class="image">
-		          <img src="static/images/fig1-radar-reguide.png" alt="Radar ReGuide" style="width: 100%; height: auto;">
+		          <img src="static/images/fig1-radar-reguide.png" alt="Radar ReGuide" style="width: 90%; height: auto;">
 		          <figcaption>
 		            <p><small>(b) Radar chart focused on ReGuide performance.</small></p>
 		          </figcaption>
@@ -135,7 +137,7 @@
 	<section class="section">
 	  <div class="container is-max-desktop">
 	    <h2 class="title is-3">OoDD in LVLMs</h2>
-	    <div class="has-text-centered" style="width:70%; height: auto; margin-bottom: 1rem;">
+	    <div class="has-text-centered" style="width:70%; height: auto; margin-bottom: 1rem; text-align: center;">
 	      <figure class="image is-inline-block">
 	        <img src="static/images/oodd-in-lvlm.png" alt="OoDD in LVLMs">
 	      </figure>
@@ -149,15 +151,17 @@
 	<!-- ReGuide section -->
 	<section class="section">
 	  <div class="container is-max-desktop">
-	  <div class="has-text-centered" style="margin-bottom: 1rem;">
+	  <div class="has-text-centered" style="margin-bottom: 1rem; text-align: center;">
 		<figure class="image is-inline-block">
 	      <img src="static/images/reguide.png" alt="ReGuide Diagram">
 	    </figure>
 		</div>
 	    <div>
 	      <p> Reflexive Guidance (ReGuide) is a simple and model-agnostic two-stage prompting strategy to enhance the OoD detectability of LVLMs. We leverage the LVLM itself to obtain guidance for OoDD from its powerful zero-shot visual recognition capabilities.</p>
-	      <p> <b>Stage 1</b> The LVLM is asked to suggest 2N class names derived from the given image. The first N classes are visually similar to the image conceptually corresponding to the near-OoD. The second N classes are visually dissimilar or belong to different domains conceptually corresponding to far-OoD. For OoD images, suggested classes often align closely with the ground-truth label. </p>
-	      <p> <b>Stage 2</b> The suggested classes are employed as auxiliary OoD classes. OoD inputs may receive higher confidence score for suggested than for ID classes. The rejection class is retained as a fallback.
+	      <br>
+		    <p> <b>Stage 1</b> The LVLM is asked to suggest 2N class names derived from the given image. The first N classes are visually similar to the image conceptually corresponding to the near-OoD. The second N classes are visually dissimilar or belong to different domains conceptually corresponding to far-OoD. For OoD images, suggested classes often align closely with the ground-truth label. </p>
+	      <br>
+		    <p> <b>Stage 2</b> The suggested classes are employed as auxiliary OoD classes. OoD inputs may receive higher confidence score for suggested than for ID classes. The rejection class is retained as a fallback.
 	    </div>
 	  </div>
 	</section>
