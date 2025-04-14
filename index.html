@@ -253,18 +253,19 @@
           </div>
           <div class="swiper-slide">
             <div style="width:100%; margin: 0 auto 1rem auto; text-align: center;">
-              <img src="static/images/result-confidence-id.png" style="max-width:70%", alt="Run 3">
+              <img src="static/images/result-confidence-id.png" style="max-width:70%; display: block; alt="Run 3">
             </div>
             <div class="content" style="text-align: left; margin-top: 1rem;">
+              <h4>Confidence scores on ID</h4>
               <ul>
                 <li>
-                  <strong>ID Confidence:</strong> GPT-4o and OpenCLIP show reliable calibration. InternVL2-76B is accurate but tends to assign overly high confidence.
+                  GPT-4o offers the best balance of accuracy and reliable confidence.
                 </li>
                 <li>
-                  <strong>OoD Confidence Bias:</strong> Many open-source models assign extreme scores (0 or 100), with LLaVA-v1.6 showing consistently high FPR.
+                  OpenCLIP and GPT-4o show the best calibration, with low ECE and AURC.
                 </li>
                 <li>
-                  <strong>Implication:</strong> Calibration is essential to ensure trustworthy confidence scores, especially for OoD rejection.
+                  InternVL2-76B achieves high accuracy but poor calibration, assigning high confidence even to incorrect predictions.
                 </li>
               </ul>
             </div>
