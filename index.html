@@ -244,7 +244,7 @@
             <div style="width:100%; margin: 0 auto 1rem auto; text-align: center;">
               <img src="static/images/result-reasoning.png" alt="Run 2">
             </div>
-            <div class="content" style="text-align: left; margin-top: 1rem;">
+            <div class="content" style="text-align: left;">
               <ul>
                 <li>High interpretability of visual inputs improves OoD prediction.</li>
                 <li>InternVL2-26B handles fine-grained object differentiation well, but GPT-4o shows more detailed rationales.</li>
@@ -252,7 +252,7 @@
             </div> 
           </div>
           <div class="swiper-slide">
-            <div style="width:50%; margin: 0 auto 1rem auto; text-align: center;">
+            <div style="width:80%; margin: 0 auto 1rem auto; text-align: center;">
               <img src="static/images/result-confidence-id.png" style="max-width:70%", alt="Run 3">
             </div>
             <div class="content" style="text-align: left; margin-top: 1rem;">
@@ -316,7 +316,7 @@
         </figure>
       </div>
       <div class="content">
-        <h3>General Performance</h3>
+        <h4>General Performance</h4>
           <ul>
             <li>ReGuide improves both <strong>ID classification</strong> and <strong>OoDD performance</strong>, especially when using visually similar classes (A<sub>near</sub>).</li>
             <li>Suggesting similar classes helps models better distinguish fine-grained differences between ID inputs.</li>
@@ -324,7 +324,7 @@
             <li>GPT-4o benefits more from ReGuide in <strong>near-OoD detection</strong>, even though it sometimes struggles with ambiguous inputs.</li>
           </ul>
           
-          <h3>Insights</h3>
+          <h4>Insights</h4>
           <ul>
             <li>ReGuide's effectiveness stems from using the <strong>image itself</strong> to generate auxiliary classes rather than relying on external text.</li>
             <li>This model-agnostic strategy provides <strong>relevant and adaptive guidance</strong> to LVLMs based on each specific input.</li>
