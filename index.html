@@ -110,14 +110,14 @@
             <p><strong>ReGuide</strong> is a self-guided prompting approach designed to improve 
               <strong>out-of-distribution detection (OoDD) in Large Vision-Language Models (LVLMs)</strong>.
             </p>
-            <h3>Motivation</h3>
+            <h4>Motivation</h4>
             <ul>
               <li><strong>Foundation models</strong> (e.g., GPT-4o) are widely used due to their strong generalization abilities.</li>
               <li>However, their <strong>trustworthiness</strong>, particularly in <strong>OoDD scenarios</strong>, is still underexplored.</li>
               <li>This raises concerns about their <strong>safe and reliable deployment</strong> in real-world applications.</li>
             </ul>
           
-            <h3>What We Do</h3>
+            <h4>What We Do</h4>
             <ul>
               <li>Evaluate the <strong>OoDD capabilities</strong> of both proprietary and open-source LVLMs.</li>
               <li>Analyze how these models express <strong>confidence</strong> through their <strong>generated natural language responses</strong>.</li>
@@ -129,7 +129,7 @@
               </li>
             </ul>
           
-            <h3>Results</h3>
+            <h4>Results</h4>
             <ul>
               <li><strong>Improves image classification performance</strong></li>
               <li><strong>Enhances OoDD detection accuracy</strong></li>
@@ -241,45 +241,42 @@
               </ul>
             </div>
           </div>
-        </div>
-        <div class="swiper-slide">
-          <div style="width:100%; margin: 0 auto 1rem auto; text-align: center;">
-            <img src="static/images/result-reasoning.png" alt="Run 2">
+          <div class="swiper-slide">
+            <div style="width:100%; margin: 0 auto 1rem auto; text-align: center;">
+              <img src="static/images/result-reasoning.png" alt="Run 2">
+            </div>
+            <div>
+              <ul>
+                <li>High interpretability of visual inputs improves OoD prediction.</li>
+                <li>InternVL2-26B handles fine-grained object differentiation well, but GPT-4o shows more detailed rationales.</li>
+              </ul>
+            </div> 
           </div>
-          <div>
-            <ul>
-              <li>High interpretability of visual inputs improves OoD prediction.</li>
-              <li>InternVL2-26B handles fine-grained object differentiation well, but GPT-4o shows more detailed rationales.</li>
-            </ul>
-          </div> 
-        </div>
-        <div class="swiper-slide">
-          <div>
-            <img src="static/images/result-confidence-id.png" style="max-width:50%", alt="Run 3">
+          <div class="swiper-slide">
+            <div>
+              <img src="static/images/result-confidence-id.png" style="max-width:50%", alt="Run 3">
+            </div>
+            <div>
+              <ul>
+                <li>
+                  <strong>ID Confidence:</strong> GPT-4o and OpenCLIP show reliable calibration. InternVL2-76B is accurate but tends to assign overly high confidence.
+                </li>
+                <li>
+                  <strong>OoD Confidence Bias:</strong> Many open-source models assign extreme scores (0 or 100), with LLaVA-v1.6 showing consistently high FPR.
+                </li>
+                <li>
+                  <strong>Implication:</strong> Calibration is essential to ensure trustworthy confidence scores, especially for OoD rejection.
+                </li>
+              </ul>
+            </div>
           </div>
-          <div>
-            <ul>
-              <li>
-                <strong>ID Confidence:</strong> GPT-4o and OpenCLIP show reliable calibration. InternVL2-76B is accurate but tends to assign overly high confidence.
-              </li>
-              <li>
-                <strong>OoD Confidence Bias:</strong> Many open-source models assign extreme scores (0 or 100), with LLaVA-v1.6 showing consistently high FPR.
-              </li>
-              <li>
-                <strong>Implication:</strong> Calibration is essential to ensure trustworthy confidence scores, especially for OoD rejection.
-              </li>
-            </ul>
-          </div>
-        </div>
       </div>
-  
         <!-- Navigation arrows -->
         <div class="swiper-button-next"></div>
         <div class="swiper-button-prev"></div>
   
         <!-- Pagination dots (optional) -->
         <div class="swiper-pagination"></div>
-      </div>
     </div>
   </section>
 
