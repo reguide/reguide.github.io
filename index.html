@@ -119,7 +119,6 @@
               <li>This raises concerns about their safe and reliable deployment in real-world applications.</li>
             </ul>
 
-            <br>
             <strong>What We Do</strong>
             <ul>
               <li>Evaluate the OoDD capabilities of both proprietary and open-source LVLMs.</li>
@@ -132,7 +131,6 @@
               </li>
             </ul>
 
-            <br>
             <strong>Results</strong>
             <ul>
               <li>Improves image classification performance</li>
@@ -248,7 +246,7 @@
               <img src="static/images/result-reasoning.png" alt="Run 2">
             </div>
             <div class="content" style="text-align: left;">
-              <h5>Reasoning</h5>
+              <p><strong>Reasoning</strong></p>
               <ul>
                 <li>High interpretability of visual inputs improves OoD prediction.</li>
                 <li>InternVL2-26B handles fine-grained object differentiation well, but GPT-4o shows more detailed rationales.</li>
@@ -257,10 +255,12 @@
           </div>
           <div class="swiper-slide">
             <div style="width:100%; margin: 0 auto 1rem auto; text-align: center;">
-              <img src="static/images/result-confidence-id.png" style="max-width:50%; display: block;" alt="Run 3">
+              <figure style="display: inline-block;">
+                <img src="static/images/result-confidence-id.png" style="max-width:50%; display: block;" alt="Run 3">
+              </figure>
             </div>
             <div class="content" style="text-align: left;">
-              <h5>Confidence scores on ID</h5>
+              <p><strong>Confidence scores on ID</strong></p>
               <ul>
                 <li>
                   GPT-4o offers the best balance of accuracy and reliable confidence.
@@ -321,7 +321,7 @@
         </figure>
       </div>
       <div class="content">
-        <h5>General Performance</h5>
+        <strong>General Performance</strong>
           <ul>
             <li>ReGuide improves both ID classification and OoDD performance, especially when using visually similar classes (i.e., near-OoD).</li>
             <li>Suggesting similar classes helps models better distinguish fine-grained differences between ID inputs.</li>
@@ -329,7 +329,7 @@
             <li>GPT-4o benefits more from ReGuide in near-OoD detection, even though it sometimes struggles with ambiguous inputs.</li>
           </ul>
           
-          <h5>Insights</h5>
+          <strong>Insights</strong>
           <ul>
             <li>ReGuide's effectiveness stems from using the image itself to generate auxiliary classes rather than relying on external text.</li>
             <li>This model-agnostic strategy provides relevant and adaptive guidance to LVLMs based on each specific input.</li>
