@@ -176,15 +176,18 @@
       <div>
           <p>
             To extend conventional OoD detection (OoDD) to Large Vision-Language Models (LVLMs), this study adapts the zero-shot CLIP-based framework by:
-              <ol>
+          </p>
+              <ul>
                 <li>Using a fixed set of in-distribution (ID) class names (<code>𝒴</code>) and a special rejection class ("none of these classes").</li>
                 <li>Extracting confidence scores from natural language outputs of LVLMs.</li>
                 <li>Defining the OoD score as the maximum confidence among ID classes applying softmax function for normalization.</li>
-              </ol>
-          </p>
+              </ul>
+      </div>
+      <div>
           <p>
             The prompt design used in LVLM-based OoDD evaluation consists of four main components:
-              <ol>
+          </p>
+              <ul>
                 <li>
                   <strong>Task Description</strong> clearly states the objectives.
                 </li>
@@ -197,8 +200,7 @@
                 <li>
                   <strong>Response Examples</strong> uses in-context learning (ICL) to present examples of valid responses.
                 </li>
-          </ol>
-        </p>
+          </ul>
       </div>
       <!-- result -->
       <div style="width:100%; margin: 0 auto 1rem auto; text-align: center;">
