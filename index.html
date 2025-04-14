@@ -29,6 +29,28 @@
   <link rel="stylesheet" href="static/css/index.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+  <!-- Style -->
+   <style>
+    .swiper-slide {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: auto;
+    }
+
+    .swiper-slide img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .swiper {
+      width: 100%;
+      height: auto;
+    }
+  </style>
+  
 </head>
 <body>
   <section class="hero">
@@ -218,5 +240,20 @@
   });
   </script>
 
+  <script>
+  const swiper = new Swiper('.mySwiper', {
+    loop: true,
+    autoHeight: true, // ✅ Add this line
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    }
+  });
+  </script>
+  
 </body>
 </html>
