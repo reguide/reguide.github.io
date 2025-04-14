@@ -173,7 +173,7 @@
           <img src="static/images/oodd-in-lvlm.png" alt="OoDD in LVLMs" style="max-width: 100%; height: auto;">
         </figure>
       </div>
-      <div>
+      <div class="content">
           <p>
             To extend conventional OoD detection (OoDD) to Large Vision-Language Models (LVLMs), this study adapts the zero-shot CLIP-based framework by:
           </p>
@@ -183,23 +183,23 @@
                 <li>Defining the OoD score as the maximum confidence among ID classes applying softmax function for normalization.</li>
               </ul>
       </div>
-      <div>
+      <div class="content">
           <p>
             The prompt design used in LVLM-based OoDD evaluation consists of four main components:
           </p>
-              <ul>
-                <li>
-                  <strong>Task Description</strong> clearly states the objectives.
-                </li>
-                <li>
-                  <strong>Rejection Class</strong> adds a special label <code>"none of these classes"</code> to allow the model to reject OoD inputs explicitly.
-                </li>
-                <li>
-                  <strong>Guidelines</strong> address the most common failure cases.
-                </li>
-                <li>
-                  <strong>Response Examples</strong> uses in-context learning (ICL) to present examples of valid responses.
-                </li>
+          <ul>
+            <li>
+              <strong>Task Description</strong> clearly states the objectives.
+            </li>
+            <li>
+              <strong>Rejection Class</strong> adds a special label <code>"none of these classes"</code> to allow the model to reject OoD inputs explicitly.
+            </li>
+            <li>
+              <strong>Guidelines</strong> address the most common failure cases.
+            </li>
+            <li>
+              <strong>Response Examples</strong> uses in-context learning (ICL) to present examples of valid responses.
+            </li>
           </ul>
       </div>
       <!-- result -->
@@ -209,7 +209,7 @@
           <img src="static/images/result-oodd-in-lvlms.png" alt="OoDD in LVLMs" style="max-width: 100%; height: auto;">
         </figure>
       </div>
-      <div>
+      <div class="content">
         <h3>Key Results and Observations</h3>
         <ul>
           <li>Proprietary LVLMs generally outperform open-source and single-modal models in both ID and OoD tasks.</li>
