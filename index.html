@@ -139,18 +139,43 @@
     </div>
   </section>
 
+  <section class="section">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3">OoDD in LVLMs</h2>
+      <!-- framework -->
+      <div style="width:70%; margin: 0 auto 1rem auto; text-align: center;">
+        <figure style="display: inline-block;">
+          <img src="static/images/oodd-in-lvlm.png" alt="OoDD in LVLMs" style="max-width: 100%; height: auto;">
+        </figure>
+      </div>
+      <div>
+        <p> Given the vast amount and broad domain coverage of data used to train LVLMs, the conventional definition faces challenges in its direct application to LVLMs. To address this, we extend the zero-shot OoDD framework of CLIP to generative LVLMs: the scenario where an in-distribution (ID) class words set does not contain the ground-truth label of an input image. We use the maximum confidence score among ID classes as OoD score.</p>
+      </div>
+      <!-- result -->
+      <div style="width:70%; margin: 0 auto 1rem auto; text-align: center;">
+        <figure style="display: inline-block;">
+          <img src="static/images/result-oodd-in-lvlms.png" alt="OoDD in LVLMs" style="max-width: 100%; height: auto;">
+        </figure>
+      </div>
+      <div>
+        <p> As the above table, proprietary models outperform the open-source models in most cases. Some open-source models perform poorly on OoDD descpite decent VLM benchmark results. Moreover, all compared models have more difficulty in detecting near-OoD than far-OoD. Finally, the proprietary models generally perform outperform outperform the single modal SOTA OoDD models. </p>
+      </div>
+    </div>
+  </section>
+  
   <section class="section result">
     <div class="container">
+      <h2 class="title is-3">Futher analysis</h2> 
       <div class="swiper mySwiper">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
-            <img src="static/images/oodd-in-lvlm.png" alt="Run 1">
+            <img src="static/images/result-further.png" alt="Run 1">
           </div>
           <div class="swiper-slide">
-            <img src="static/images/reguide.png" alt="Run 2">
+            <img src="static/images/reasoning.png" alt="Run 2">
           </div>
           <div class="swiper-slide">
-            <img src="static/images/fig1-radar-all.png" alt="Run 3">
+            <img src="static/images/confidence-id.png" alt="Run 3">
           </div>
         </div>
   
@@ -179,9 +204,19 @@
         <br>
         <p> <b>Stage 2</b> The suggested classes are employed as auxiliary OoD classes. OoD inputs may receive higher confidence score for suggested than for ID classes. The rejection class is retained as a fallback.
       </div>
+      <!-- result -->
+      <div style="width:70%; margin: 0 auto 1rem auto; text-align: center;">
+        <figure style="display: inline-block;">
+          <img src="static/images/result-reguide.png" alt="OoDD in LVLMs" style="max-width: 100%; height: auto;">
+        </figure>
+      </div>
+      <div>
+        <p> ID classification accuracy improves even though the suggested classes includes class names that are visually similar to ID (i.e., near-OoD). InternVL2-26B shows improvements in both FPR@95%TPR and AUROC, but larger models like InternVL2-76B and GPT-4o exhibit improved AUROC but degraded FPR@95%TPR. This is due to labeling issues on a small subset of ID. </p>
+      </div>
     </div>
   </section>
 
+  
   <section class="section">
     <div class="container is-max-desktop">
       <h2 class="title is-3">BibTeX</h2>
