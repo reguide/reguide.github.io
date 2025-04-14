@@ -288,24 +288,24 @@
         </figure>
       </div>
       <div>
-        <p> Reflexive Guidance (ReGuide) is a simple and model-agnostic two-stage prompting strategy to enhance the OoD detectability of LVLMs. We leverage the LVLM itself to obtain guidance for OoDD from its powerful zero-shot visual recognition capabilities.</p>
+        <p>
+          Reflexive Guidance (ReGuide) is a simple and model-agnostic two-stage prompting strategy to enhance the OoD detectability of LVLMs. We leverage the LVLM itself to obtain guidance for OoDD from its powerful zero-shot visual recognition capabilities.
+        </p>
         <br>
+        <p>
+          <strong>Stage 1:</strong> The LVLM suggests <i>2N</i> class names based on the input image.
+        </p>
         <ul>
-          <li>
-            <strong>Stage 1:</strong> The LVLM suggests <i>2N</i> class names based on the input image.
-            <ul>
-              <li>The first <i>N</i> classes are visually similar (near-OoD).</li>
-              <li>The second <i>N</i> classes are visually dissimilar or from different domains (far-OoD).</li>
-              <li>For OoD images, suggested classes often closely match the ground-truth label.</li>
-            </ul>
-          </li>
-          <li>
-            <strong>Stage 2:</strong> The suggested classes are used as auxiliary OoD classes.
-            <ul>
-              <li>OoD inputs may receive higher confidence for these classes than for ID classes.</li>
-              <li>The rejection class remains as a fallback option.</li>
-            </ul>
-          </li>
+          <li>The first <i>N</i> classes are visually similar (near-OoD).</li>
+          <li>The second <i>N</i> classes are visually dissimilar or from different domains (far-OoD).</li>
+          <li>For OoD images, suggested classes often closely match the ground-truth label.</li>
+        </ul>
+        <p>
+          <strong>Stage 2:</strong> The suggested classes are used as auxiliary OoD classes.
+        </p>
+        <ul>
+          <li>OoD inputs may receive higher confidence for these classes than for ID classes.</li>
+          <li>The rejection class remains as a fallback option.</li>
         </ul>
       </div>
       <!-- result -->
