@@ -280,6 +280,36 @@
               </ul>
             </div>
           </div>
+          <div class="swiper-slide">
+            <div style="width:50%; margin: 0 auto 1rem auto; text-align: center;">
+              <figure style="display: inline-block;">
+                <img src="static/images/result-failure-case.png" style="max-width:100%;" alt="Run 3">
+                <figcaption>
+                  <p><small>(a) The number of each failure case </small></p>
+                </figcaption>
+              </figure>
+              <figure style="display: inline-block;">
+                <img src="static/images/result-inappropriate-case.png" style="max-width:100%;" alt="Run 3">
+                <figcaption>
+                  <p><small>(b) Examples of inappropriate images and the corresponding responses </small></p>
+                </figcaption>
+              </figure>
+            </div>
+            <div class="content" style="text-align: left;">
+              <p><strong>Response failure</strong></p>
+              <ul>
+                <li>
+                  Most common failure is a "mismatch between the predicted class and the class with the highest confidence score".
+                </li>
+                <li>
+                  Proprietary models exhibit more failure cases mainly due to their conservative approach, as they often refuse to respond to uncertain or sensitive inputs, resulting in lower valid response rates.
+                </li>
+                <li>
+                  Failure cases are not confined to any specific dataset, suggesting they arise from both the nature of the data and the underlying mechanisms of the models.
+                </li>
+              </ul>
+            </div>
+          </div>
       </div>
         <!-- Navigation arrows -->
         <div class="swiper-button-next"></div>
