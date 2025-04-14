@@ -107,14 +107,47 @@
         <div class="column is-four-fifths">
           <h2 class="title is-3">Abstract</h2>
           <div class="content has-text-justified">
-            <p>
-              With the recent emergence of foundation models trained on internet-scale data and demonstrating remarkable generalization capabilities, such foundation models have become more widely adopted, leading to an expanding range of application domains. Despite this rapid proliferation, the trustworthiness of foundation models remains underexplored. Specifically, the out-of-distribution detection (OoDD) capabilities of large vision-language models (LVLMs), such as GPT-4o, which are trained on massive multi-modal data, have not been sufficiently addressed. The disparity between their demonstrated potential and practical reliability raises concerns regarding the safe and trustworthy deployment of foundation models. To address this gap, we evaluate and analyze the OoDD capabilities of various proprietary and open-source LVLMs. Our investigation contributes to a better understanding of how these foundation models represent confidence scores through their generated natural language responses. Furthermore, we propose a self-guided prompting approach, termed Reflexive Guidance (ReGuide), aimed at enhancing the OoDD capability of LVLMs by leveraging self-generated image-adaptive concept suggestions. Experimental results demonstrate that our ReGuide enhances the performance of current LVLMs in both image classification and OoDD tasks. The lists of sampled images, along with the prompts and responses for each sample are available at <a href="https://github.com/daintlab/ReGuide" target="_blank">https://github.com/daintlab/ReGuide</a>.
+            <p><strong>ReGuide</strong> is a self-guided prompting approach designed to improve 
+              <strong>out-of-distribution detection (OoDD)</strong> in 
+              <strong>Large Vision-Language Models (LVLMs)</strong> such as GPT-4o.
             </p>
+          
+            <h3>🔍 Motivation</h3>
+            <ul>
+              <li><strong>Foundation models</strong> (e.g., GPT-4o) are widely used due to their strong generalization abilities.</li>
+              <li>However, their <strong>trustworthiness</strong>, particularly in <strong>OoDD scenarios</strong>, is still underexplored.</li>
+              <li>This raises concerns about their <strong>safe and reliable deployment</strong> in real-world applications.</li>
+            </ul>
+          
+            <h3>🚀 What We Do</h3>
+            <ul>
+              <li>Evaluate the <strong>OoDD capabilities</strong> of both proprietary and open-source LVLMs.</li>
+              <li>Analyze how these models express <strong>confidence</strong> through their <strong>generated natural language responses</strong>.</li>
+              <li>Propose <strong>ReGuide</strong>, which:
+                <ul>
+                  <li>Generates <strong>image-adaptive concept suggestions</strong></li>
+                  <li>Improves <strong>confidence estimation</strong> and <strong>robustness</strong> in OoDD settings</li>
+                </ul>
+              </li>
+            </ul>
+          
+            <h3>🧪 Results</h3>
+            <ul>
+              <li><strong>Improves image classification performance</strong></li>
+              <li><strong>Enhances OoDD detection accuracy</strong></li>
+              <li>Works as a simple yet effective enhancement for current LVLMs</li>
+            </ul>
+          
+            <h3>📂 Resources</h3>
+            <p>
+              ✅ <strong>Prompts, responses, and sample images available at:</strong><br />
+              👉 <a href="https://github.com/daintlab/ReGuide" target="_blank">https://github.com/daintlab/ReGuide</a>
+            </p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
   <section class="section">
     <div class="container is-max-desktop">
