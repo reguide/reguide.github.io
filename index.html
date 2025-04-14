@@ -111,14 +111,16 @@
             <p><strong>ReGuide</strong> is a self-guided prompting approach designed to improve 
               out-of-distribution detection (OoDD) in Large Vision-Language Models (LVLMs).
             </p>
-            <h5>Motivation</h5>
+            <br>
+            <strong>Motivation</strong>
             <ul>
               <li>Foundation models (e.g., GPT-4o) are widely used due to their strong generalization abilities.</li>
               <li>However, their trustworthiness, particularly in OoDD scenarios, is still underexplored.</li>
               <li>This raises concerns about their safe and reliable deployment in real-world applications.</li>
             </ul>
-          
-            <h5>What We Do</h5>
+
+            <br>
+            <strong>What We Do</strong>
             <ul>
               <li>Evaluate the OoDD capabilities of both proprietary and open-source LVLMs.</li>
               <li>Analyze how these models express confidence through their generated natural language responses.</li>
@@ -129,8 +131,9 @@
                 </ul>
               </li>
             </ul>
-          
-            <h5>Results</h5>
+
+            <br>
+            <strong>Results</strong>
             <ul>
               <li>Improves image classification performance</li>
               <li>Enhances OoDD detection accuracy</li>
@@ -318,7 +321,7 @@
         </figure>
       </div>
       <div class="content">
-        <h4>General Performance</h4>
+        <h5>General Performance</h5>
           <ul>
             <li>ReGuide improves both ID classification and OoDD performance, especially when using visually similar classes (i.e., near-OoD).</li>
             <li>Suggesting similar classes helps models better distinguish fine-grained differences between ID inputs.</li>
@@ -326,7 +329,7 @@
             <li>GPT-4o benefits more from ReGuide in near-OoD detection, even though it sometimes struggles with ambiguous inputs.</li>
           </ul>
           
-          <h4>Insights</h4>
+          <h5>Insights</h5>
           <ul>
             <li>ReGuide's effectiveness stems from using the image itself to generate auxiliary classes rather than relying on external text.</li>
             <li>This model-agnostic strategy provides relevant and adaptive guidance to LVLMs based on each specific input.</li>
