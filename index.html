@@ -28,6 +28,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/css/bulma-carousel.min.css" />
   <link rel="stylesheet" href="static/css/index.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
 </head>
 <body>
   <section class="hero">
@@ -116,42 +117,27 @@
     </div>
   </section>
 
-  <section class="section">
-    <div class="container is-max-desktop">
-      <h2 class="title is-3">OoDD in LVLMs</h2>
-      <div style="width:70%; margin: 0 auto 1rem auto; text-align: center;">
-        <figure style="display: inline-block;">
-          <img src="static/images/oodd-in-lvlm.png" alt="OoDD in LVLMs" style="max-width: 100%; height: auto;">
-        </figure>
-      </div>
-      <div>
-        <p> Given the vast amount and broad domain coverage of data used to train LVLMs, the conventional definition faces challenges in its direct application to LVLMs. To address this, we extend the zero-shot OoDD framework of CLIP to generative LVLMs: the scenario where an in-distribution (ID) class words set does not contain the ground-truth label of an input image. We use the maximum confidence score among ID classes as OoD score.</p>
-      </div>
-    </div>
-  </section>
-
   <section class="section result">
     <div class="container">
-      <div class="carousel carousel-animated carousel-animate-slide" data-autoplay="true">
-        <div class="carousel-container">
-          <div class="carousel-item is-active">
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
             <img src="static/images/oodd-in-lvlm.png" alt="Run 1">
           </div>
-          <div class="carousel-item">
+          <div class="swiper-slide">
             <img src="static/images/reguide.png" alt="Run 2">
           </div>
-          <div class="carousel-item">
+          <div class="swiper-slide">
             <img src="static/images/fig1-radar-all.png" alt="Run 3">
           </div>
         </div>
-        <div class="carousel-navigation is-overlay">
-          <div class="carousel-nav-left">
-            <i class="fa fa-chevron-left" aria-hidden="true"></i>
-          </div>
-          <div class="carousel-nav-right">
-            <i class="fa fa-chevron-right" aria-hidden="true"></i>
-          </div>
-        </div>
+  
+        <!-- Navigation arrows -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+  
+        <!-- Pagination dots (optional) -->
+        <div class="swiper-pagination"></div>
       </div>
     </div>
   </section>
@@ -217,15 +203,20 @@
   </footer>
 
   <!-- Scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/js/bulma-carousel.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
   <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      bulmaCarousel.attach('.carousel', {
-        slidesToScroll: 1,
-        slidesToShow: 1,
-        loop: true
-      });
-    });
+  const swiper = new Swiper('.mySwiper', {
+    loop: true,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+  });
   </script>
+
 </body>
 </html>
