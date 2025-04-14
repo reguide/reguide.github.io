@@ -109,31 +109,31 @@
           <h2 class="title is-3">Abstract</h2>
           <div class="content has-text-justified">
             <p><strong>ReGuide</strong> is a self-guided prompting approach designed to improve 
-              <strong>out-of-distribution detection (OoDD) in Large Vision-Language Models (LVLMs)</strong>.
+              out-of-distribution detection (OoDD) in Large Vision-Language Models (LVLMs).
             </p>
-            <h4>Motivation</h4>
+            <h5>Motivation</h5>
             <ul>
-              <li><strong>Foundation models</strong> (e.g., GPT-4o) are widely used due to their strong generalization abilities.</li>
-              <li>However, their <strong>trustworthiness</strong>, particularly in <strong>OoDD scenarios</strong>, is still underexplored.</li>
-              <li>This raises concerns about their <strong>safe and reliable deployment</strong> in real-world applications.</li>
+              <li>Foundation models (e.g., GPT-4o) are widely used due to their strong generalization abilities.</li>
+              <li>However, their trustworthiness, particularly in OoDD scenarios, is still underexplored.</li>
+              <li>This raises concerns about their safe and reliable deployment in real-world applications.</li>
             </ul>
           
-            <h4>What We Do</h4>
+            <h5>What We Do</h5>
             <ul>
-              <li>Evaluate the <strong>OoDD capabilities</strong> of both proprietary and open-source LVLMs.</li>
-              <li>Analyze how these models express <strong>confidence</strong> through their <strong>generated natural language responses</strong>.</li>
-              <li>Propose <strong>ReGuide</strong>, which:
+              <li>Evaluate the OoDD capabilities of both proprietary and open-source LVLMs.</li>
+              <li>Analyze how these models express confidence through their generated natural language responses.</li>
+              <li>Propose ReGuide, which:
                 <ul>
-                  <li>Generates <strong>image-adaptive concept suggestions</strong></li>
-                  <li>Improves <strong>confidence estimation</strong> and <strong>robustness</strong> in OoDD settings</li>
+                  <li>Generates image-adaptive concept suggestions</li>
+                  <li>Improves confidence estimation and robustness in OoDD settings</li>
                 </ul>
               </li>
             </ul>
           
-            <h4>Results</h4>
+            <h5>Results</h5>
             <ul>
-              <li><strong>Improves image classification performance</strong></li>
-              <li><strong>Enhances OoDD detection accuracy</strong></li>
+              <li>Improves image classification performance</li>
+              <li>Enhances OoDD detection accuracy</li>
               <li>Works as a simple yet effective enhancement for current LVLMs</li>
             </ul>
             </div>
@@ -214,7 +214,7 @@
         <h3>Key Results and Observations</h3>
         <ul>
           <li>Proprietary LVLMs generally outperform open-source and single-modal models in both ID and OoD tasks.</li>
-          <li>LVLMs perform better on <strong>far-OoD</strong> than <strong>near-OoD</strong>.</li>
+          <li>LVLMs perform better on far-OoD than near-OoD.</li>
           <li>InternVL2-76B achieves the best balance across ID accuracy, OoD performance, and valid response rate.</li>
           <li>Some open-source models show 100% FPR due to biased confidence distribution, e.g., GLM-4v performs best in OoD but poorly in ID classification.</li>
         </ul> 
@@ -253,8 +253,8 @@
             </div> 
           </div>
           <div class="swiper-slide">
-            <div class="has-text-centered" style="margin-bottom: 1rem; text-align: center;">
-              <img src="static/images/result-confidence-id.png" style="max-width:70%; display: block; alt="Run 3">
+            <div class="image has-text-centered" style="margin-bottom: 1rem; text-align: center;">
+              <img src="static/images/result-confidence-id.png" style="max-width:50%; display: block;" alt="Run 3">
             </div>
             <div class="content" style="text-align: left;">
               <h5>Confidence scores on ID</h5>
@@ -320,16 +320,16 @@
       <div class="content">
         <h4>General Performance</h4>
           <ul>
-            <li>ReGuide improves both <strong>ID classification</strong> and <strong>OoDD performance</strong>, especially when using visually similar classes (i.e., Near-OoD).</li>
+            <li>ReGuide improves both ID classification and OoDD performance, especially when using visually similar classes (i.e., near-OoD).</li>
             <li>Suggesting similar classes helps models better distinguish fine-grained differences between ID inputs.</li>
-            <li>InternVL2-76B and GPT-4o show gains in <strong>AUROC</strong>, <strong>FPR@95%TPR</strong>, and <strong>valid response rate</strong> when guided by ReGuide.</li>
-            <li>GPT-4o benefits more from ReGuide in <strong>near-OoD detection</strong>, even though it sometimes struggles with ambiguous inputs.</li>
+            <li>InternVL2-76B and GPT-4o show gains in AUROC, FPR@95%TPR, and valid response rate when guided by ReGuide.</li>
+            <li>GPT-4o benefits more from ReGuide in near-OoD detection, even though it sometimes struggles with ambiguous inputs.</li>
           </ul>
           
           <h4>Insights</h4>
           <ul>
-            <li>ReGuide's effectiveness stems from using the <strong>image itself</strong> to generate auxiliary classes rather than relying on external text.</li>
-            <li>This model-agnostic strategy provides <strong>relevant and adaptive guidance</strong> to LVLMs based on each specific input.</li>
+            <li>ReGuide's effectiveness stems from using the image itself to generate auxiliary classes rather than relying on external text.</li>
+            <li>This model-agnostic strategy provides relevant and adaptive guidance to LVLMs based on each specific input.</li>
             <li>It offers a simple and scalable way to improve robustness in OoDD tasks without additional textual data.</li>
           </ul>
       </div>
