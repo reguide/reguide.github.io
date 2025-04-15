@@ -299,7 +299,27 @@
               <p><strong>Response failure</strong></p>
               <ul>
                 <li>
-                  Most common failure is a "mismatch between the predicted class and the class with the highest confidence score".
+                  Failure cases are as follows:
+                  <ul>
+                    <li>
+                      (1) A mismatch between the predicted class and the class with the maximum confidence score
+                    </li>
+                    <li>
+                      (2) Failure to provide confidence scores for all classes
+                    </li>
+                    <li>
+                      (3) Responses that are not structured as the given format
+                    </li>
+                    <li>
+                      (4) Responses indicating an inability to identify the given image
+                    </li>
+                    <li>
+                      (5) Inclusion of classes not listed among the given
+                    </li>
+                    <li>
+                      (6) Class duplication
+                    </li>
+                  </ul>
                 </li>
                 <li>
                   Proprietary models exhibit more failure cases mainly due to their conservative approach, as they often refuse to respond to uncertain or sensitive inputs, resulting in lower valid response rates.
